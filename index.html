@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Peddy</title>
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://kit.fontawesome.com/8ddf321cf8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+      <!-- header section  -->
+      <header>
+            <!-- nav bar  -->
+            <nav class=" container mx-auto">
+                  <div class="navbar bg-base-100">
+                        <div class="navbar-start">
+                              <div class="dropdown">
+                                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M4 6h16M4 12h8m-8 6h16" />
+                                          </svg>
+                                    </div>
+                                    <ul tabindex="0"
+                                          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                                          <li><a>Home</a></li>
+                                          <li><a>Shop</a></li>
+                                          <li><a>Contact</a></li>
+                                    </ul>
+                              </div>
+                              <div class=" flex items-center gap-3">
+                                    <img src="./assets/images/logo.webp" alt="">
+                                    <a href="#" class=" text-3xl font-bold">Peddy</a>
+                              </div>
+                        </div>
+                        <div class="navbar-center hidden lg:flex">
+                              <ul class="menu menu-horizontal px-1">
+                                    <li><a>Home</a></li>
+                                    <li><a>Shop</a></li>
+                                    <li><a>Contact</a></li>
+                              </ul>
+                        </div>
+                        <div class="navbar-end  ">
+                              <div class="text-xl btn btn-circle">
+                                    <i class="fa-regular fa-user"></i>
+                              </div>
+                        </div>
+                  </div>
+            </nav>
+
+      </header>
+
+      <!-- main section  -->
+      <main class="mb-14">
+            <!-- hero section  -->
+            <section class=" container mx-auto mt-14">
+                  <!-- text part  -->
+                  <div>
+                        <div class=" w-11/12 md:w-3/5 mx-auto text-center">
+                              <h4 class=" text-xl md:text-2xl text-gray-500 font-semibold  mb-6"> Bringing Families
+                                    Together 🔥</h4>
+                              <h1 class=" font-bold text-3xl md:text-4xl xl:text-6xl">Your Path to Adoption Starts Here
+                              </h1>
+                              <p class="mt-6">Discover all the resources you need to guide you through the adoption
+                                    process.
+                                    Connect with experienced professionals and take the first steps toward growing your
+                                    family today.</p>
+                              <a href="#mainCon"><button
+                                          class="btn bg-[#0E7A81] text-white font-semibold text-lg mt-6">View
+                                          more</button></a>
+                        </div>
+
+                  </div>
+                  <!-- image part  -->
+
+                  <div class=" w-fit mx-auto mt-16">
+                        <img src="./assets/images/pet.webp" alt="">
+
+                  </div>
+            </section>
+            <!-- main part  -->
+            <section class=" container mx-auto" id="mainCon">
+                  <div>
+                        <div class=" w-11/12 md:w-3/5 mx-auto text-center">
+                              <h1 class="text-3xl font-bold mb-6">Adopt Your Best Friend</h1>
+                              <p>Open your heart and home to a loving companion waiting for a forever family.
+                                    Find the perfect match through our adoption program and give a pet the second chance
+                                    they deserve.</p>
+                        </div>
+
+                        <!-- Pet Categories  -->
+
+                        <div class="mt-12 w-11/12 xl:w-full mx-auto">
+                              <div class="flex items-center gap-2  md:gap-8  mx-auto justify-between"
+                                    id="categories-cont">
+
+                              </div>
+
+                        </div>
+
+
+                  </div>
+                  <div class="mt-8 w-11/12 mx-auto xl:w-full">
+                        <div class=" flex justify-between items-center">
+                              <h1 class="font-bold text-xl md:text-2xl">Best Deal For you</h1>
+                              <button class=" btn bg-[#0E7A81] text-white" id="short-price-btn">Sort by Price</button>
+                        </div>
+                  </div>
+            </section>
+
+
+            <!-- Modal  -->
+            <div id="modalConte">
+                  <!-- Open the modal using ID.showModal() method -->
+
+                  <dialog id="detailsModal" class="modal">
+                        <div id="modalDiv">
+
+                        </div>
+                  </dialog>
+            </div>
+            <!-- modal 2  -->
+            <!-- Open the modal using ID.showModal() method -->
+
+            <div>
+                  <dialog id="adaptModal" class="modal">
+                        <div class="modal-box w-fit p-8">
+                              <div class=" text-center  ">
+                                    <i class="fa-solid fa-handshake fa-bounce fa-2xl" style="color: #0e7a81;"></i>
+                                    <h3 class="text-3xl font-black">Congrates</h3>
+                                    <p class="py-4">Adoption Process is Start For your Pet</p>
+                                    <h3 class="text-6xl font-black" id="adoptCount">3</h3>
+
+                              </div>
+                        </div>
+                  </dialog>
+            </div>
+            <!-- spnner  -->
+            <div class=" relative hidden" id="loder">
+                  <div class="flex-col absolute top-40  md:-left-36 gap-4 w-full flex items-center justify-center">
+                        <div
+                              class="w-20 h-20 border-4 border-transparent text-blue-400 text-4xl animate-spin flex items-center justify-center border-t-[#0E7A81] rounded-full">
+                              <div
+                                    class="w-16 h-16 border-4 border-transparent text-red-400 text-2xl animate-spin flex items-center justify-center border-t-[#0E7A81] rounded-full">
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <!-- main container  -->
+            <section class=" container mx-auto mt-6">
+                  <div class="w-11/12 mx-auto md:w-full grid  grid-cols-12 gap-2 md:gap-6">
+                        <div class=" col-span-12 md:col-span-9   rounded-xl ">
+                              <div class=" min-h-96 rounded-lg   grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
+                                    id="pet-cont">
+
+                              </div>
+
+                        </div>
+
+
+                        <div class=" min-h-96 col-span-12 md:col-span-3 border border-gray-300 rounded-xl h-full p-5">
+
+                              <div class=" grid grid-cols-2 gap-3 w-full" id="liked-pet-cont">
+
+                              </div>
+
+
+
+                        </div>
+
+
+            </section>
+      </main>
+
+      <!-- footer  -->
+
+      <footer class="bg-[#131313] text-white md:p-10">
+            <div class=" footer  container mx-auto px-10 py-20 md:p-24 justify-between">
+                  <nav>
+                        <div class=" flex items-center gap-3">
+                              <img src="./assets/images/logo.webp" alt="">
+                              <a href="#" class=" text-3xl font-bold">Peddy</a>
+                        </div>
+                        <h6 class="footer-title">Location: av. Washington 165, NY CA</h6>
+                        <a class="link link-hover"> 54003</a>
+                        <a class="link link-hover"> Phone: +31 85 964 47 25</a>
+                        <a class="link link-hover">Email: info@yourdomain.com</a>
+                        <a class="link link-hover">Openings hours: 9.00 AM - 5.00 PM</a>
+                        <div class=" flex gap-4 text-3xl mt-2">
+                              <i class="fa-brands fa-facebook" style="color: #316ff6;"></i>
+                              <i class="fa-brands fa-x-twitter"></i>
+                              <i class="fa-brands fa-youtube" style="color: #ff4747;"></i>
+                              <i class="fa-brands fa-instagram" style="color: #ff0088;"></i>
+                        </div>
+                  </nav>
+                  <nav>
+                        <h6 class="footer-title">Useful Links</h6>
+                        <a class="link link-hover">Home</a>
+                        <a class="link link-hover">About us</a>
+                        <a class="link link-hover">Animals</a>
+                        <a class="link link-hover">Foundation</a>
+                        <a class="link link-hover">Contact</a>
+
+                  </nav>
+
+                  <form class=" w-fit">
+                        <h6 class="footer-title">Drop a Message</h6>
+                        <input class="input focus:outline-none bg-gray-300 bg-opacity-25 text-white borderwh"
+                              type="text">
+                        <button
+                              class=" w-full btn bg-[#0E7A81] text-white border-none hover:bg-[#095257]">Subscribe</button>
+                  </form>
+            </div>
+      </footer>
+
+
+      <script src="./js/main.js"></script>
+</body>
+
+</html>
